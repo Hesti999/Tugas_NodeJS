@@ -34,13 +34,19 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// const crypto = require("crypto");
-
-const Dotenv = require("dotenv");
 const Cors = require("cors");
 
-// Dotenv.config({ path: "./config/Config.env" });
 app.use(Cors());
+
+const routes = require("./routes/routes");
+app.use(routes);
+
+mongoose
+  .connect("rhs")
+  .then(() => {
+    app.listen(3000, () => console.log("Connection Succes"));
+  })
+  .catch((err) => console.log(err));
 
 // const getHashedPassword = (password) => {
 //   const sha256 = crypto.createHash("sha256");
@@ -55,8 +61,6 @@ app.use(Cors());
 // app.get("/register", (req, res) => {
 //   res.render("registrasi");
 // });
-const routes = require("./routes/routes");
-app.use(routes);
 
 // const Cryptr = require("cryptr");
 // const cryptr = new Cryptr("myTotalySecretKey");
@@ -146,10 +150,3 @@ const post = require("./cont");
 //     });
 //   }
 // });
-
-mongoose
-  .connect("mongodb+srv://Hest:123@cluster0.imovk.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
-  .then(() => {
-    app.listen(3000, () => console.log("Connection Succes"));
-  })
-  .catch((err) => console.log(err));
