@@ -1,0 +1,24 @@
+.jumbotron {
+  background-color: #e5e5f7;
+  opacity: 0.8;
+  background-image: linear-gradient(#000000 4px, transparent 4px), linear-gradient(to right, #000000 4px, #e5e5f7 4px);
+  background-size: 80px 80px;
+}
+
+.login {
+  font-size: 40px;
+  letter-spacing: 5px;
+  text-shadow: 5px 5px 0 #cf6a87, -5px -5px 0 #f5cd79;
+}
+
+.jumbotron .col-9 {
+  border: 10px solid black;
+  background-color: white;
+  margin: 180px 0 180px 0;
+}
+
+button .btn {
+  background-color: rgb(#241, #231, #254);
+  border: 2px solid black;
+  font-size: 300px;
+}

@@ -1,0 +1,46 @@
+* {
+  font-family: "Saira Condensed", sans-serif;
+}
+
+body {
+  background-image: url(./img/grid-example.jfif);
+  background-repeat: repeat;
+}
+
+.product-box {
+  border: 3px solid black;
+  font-size: 20px;
+  letter-spacing: 10px;
+}
+
+.box-page .text-center {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-box:nth-child(odd) {
+  background-color: yellow;
+  color: black;
+}
+
+.product-box:nth-child(even) {
+  background-color: black;
+  color: yellow;
+}
+
+.tombol {
+  position: fixed;
+  bottom: 100px;
+  left: 150px;
+}
+
+.tambah {
+  border-radius: 50%;
+  font-size: 50px;
+  color: wheat;
+  background-color: black;
+}
+
+.tombol .tambah {
+  box-shadow: 5px 2px 0 yellow;
+}

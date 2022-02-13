@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- My Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+
+    <title>Hello, world!</title>
+  </head>
+
+  <style>
+    * {
+      font-family: "Saira Condensed", sans-serif;
+    }
+
+    .detail {
+      margin: auto;
+    }
+
+    .card {
+      position: relative;
+    }
+
+    .card button {
+      position: absolute;
+      display: inline-block;
+    }
+
+    .text-center {
+      margin-top: 150px;
+      margin-left: 420px;
+    }
+
+    .card .name {
+      font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    }
+
+    .card h4 {
+      letter-spacing: 3px;
+    }
+
+    .name span {
+      letter-spacing: 30px;
+    }
+
+    .setting {
+      font-family: "Times New Roman", Times, serif;
+      font-size: 15px;
+    }
+
+    .setting .hapus {
+      top: 180px;
+      left: 40px;
+      background-color: #c44569;
+      padding: 0 5px 0 5px;
+      border-radius: 5px;
+    }
+
+    .setting .ubah {
+      background-color: #16a085;
+      top: 180px;
+      right: 50px;
+      padding: 0 5px 0 5px;
+      border-radius: 5px;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  </style>
+
+  <body>
+    <div class="box-page">
+      <div class="container pb-5">
+        <div class="detail">
+          <div class="text-center justify-content-center">
+            <div class="card mt-5" style="width: 18rem">
+              <img src="../public/img/lauren-sauder-1OUzxbySjlQ-unsplash.jpg" class="card-img-top" alt="..." />
+              <div class="setting text-uppercase">
+                <form method="POST" action="/detail?_method=DELETE">
+                  <input type="hidden" name="product" value="<%= product.product %>" />
+                  <button class="text-light col-2 hapus" type="submit">Hapus</button>
+                </form>
+                <form method="POST" action="/detail?_method=DELETE">
+                  <button class="text-light col-2 ubah" type="submit">Ubah</button>
+                </form>
+              </div>
+              <div class="card-body">
+                <div class="row title justify-content-center my-3">
+                  <p>EXP</p>
+                  <h3><%= product.expired %></h3>
+                </div>
+                <div class="row name">
+                  <p>product.</p>
+                  <span> . </span>
+                  <h4 shadow-lg fw-bold><%= product.product %></h4>
+                </div>
+                <div class="row name">
+                  <p>Category</p>
+                  <span> . </span>
+                  <h4 shadow-lg fw-bold><%= product.category %></h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tombol">
+          <div class="row">
+            <div class="col-1 justify-content-center text-center"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+  </body>
+</html>

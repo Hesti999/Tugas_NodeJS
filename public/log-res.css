@@ -1,0 +1,52 @@
+* {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+/* Navbar */
+
+nav {
+  background-image: url("./img/grid-example.jfif");
+  border-bottom: 10px solid black;
+}
+
+.navbar .navbar-brand {
+  font-size: 50px;
+  border: 2px solid black;
+}
+
+.navbar-nav a {
+  background-color: black;
+}
+
+.navbar .nav-link {
+  font-size: 20px;
+  color: white;
+}
+
+.badges {
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar .nav-link a {
+  color: white;
+}
+
+/* Jumbotron */
+
+.jumbotron {
+  background: url(./img/lauren-sauder-1OUzxbySjlQ-unsplash.jpg);
+  padding: 250px 0 250px 0;
+  background-size: cover;
+  /* background-position: 0 -950px; */
+}
+
+.jumbotron .col-7 {
+  background-color: white;
+  border: 10px solid black;
+  letter-spacing: 5px;
+}
+
+.jumbotron h1 {
+  text-shadow: 3px 3px yellow;
+}
