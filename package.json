@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "axios": "^0.26.0",
     "body-parser": "^1.19.1",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.6",
@@ -15,6 +16,27 @@
     "jsonwebtoken": "^8.5.1",
     "method-override": "^3.0.0",
     "mongoose": "^6.2.1",
-    "nodemon": "^2.0.15"
-  }
+    "multer": "^1.4.4",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7"
+  },
+  "name": "assign",
+  "version": "1.0.0",
+  "main": "apps.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Hesti999/Tugas_NodeJS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Hesti999/Tugas_NodeJS/issues"
+  },
+  "homepage": "https://github.com/Hesti999/Tugas_NodeJS#readme",
+  "description": ""
 }

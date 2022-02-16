@@ -21,6 +21,7 @@ exports.postLogin = async (req, res) => {
         message: "Invalid email or password",
         messageClass: "alert-danger",
         statusCode: 400,
+        title: "Login",
       });
     } else {
       let token = JWT.sign({ email: DataFind.email }, "myTotalySecretKey", { expiresIn: "1h" });

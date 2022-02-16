@@ -1,11 +1,11 @@
 const Mongoose = require("mongoose");
 
 var userSchema = new Mongoose.Schema({
-  user: { type: String, required: true },
-  product: { type: String, required: true },
-  expired: { type: String, required: true },
-  // pict: { type: String, required: true },
-  category: { type: String, required: true },
+  username: { type: String },
+  product: { type: String },
+  expired: { type: String },
+  image: { type: String },
+  category: { type: String },
 });
 
 const Product = Mongoose.model("product", userSchema);

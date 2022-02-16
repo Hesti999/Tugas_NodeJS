@@ -57,7 +57,7 @@
     }
 
     .setting .hapus {
-      top: 180px;
+      top: 250px;
       left: 40px;
       background-color: #c44569;
       padding: 0 5px 0 5px;
@@ -66,7 +66,7 @@
 
     .setting .ubah {
       background-color: #16a085;
-      top: 180px;
+      top: 250px;
       right: 50px;
       padding: 0 5px 0 5px;
       border-radius: 5px;
@@ -83,12 +83,11 @@
         <div class="detail">
           <div class="text-center justify-content-center">
             <div class="card mt-5" style="width: 18rem">
-              <img src="../public/img/lauren-sauder-1OUzxbySjlQ-unsplash.jpg" class="card-img-top" alt="..." />
+              <img src="../<%= product.image %> " class="card-img-top" alt="..." />
               <div class="setting text-uppercase">
-                <form method="POST" action="/detail?_method=DELETE">
-                  <input type="hidden" name="product" value="<%= product.product %>" />
-                  <button class="text-light col-2 hapus" type="submit">Hapus</button>
-                </form>
+              
+                  <a data-id= <%= product.product %>  class="text-light col-3 hapus">Hapus</a>
+                
                 <form method="POST" action="/detail?_method=DELETE">
                   <button class="text-light col-2 ubah" type="submit">Ubah</button>
                 </form>

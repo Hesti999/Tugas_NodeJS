@@ -1,4 +1,5 @@
 const Product = require("../models/product");
+const axios = require("axios");
 
 exports.getHome = (req, res) => {
   const params = req.params.username;
@@ -9,12 +10,15 @@ exports.getHome = (req, res) => {
 };
 
 exports.getProduct = async (req, res) => {
-  params = req.params.username;
-  const products = await Product.find({ user: params });
-  res.render("product", {
-    params,
-    products,
-  });
+  axios
+    .get("http://localhost:3000/api/product/:username")
+    .then(function (response) {
+      const params = req.params.username;
+      res.render("product", { products: response.data, params });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
 };
 
 exports.getProductExp = (req, res) => {
@@ -32,7 +36,9 @@ exports.postProductExp = (req, res) => {
     product: req.body.product,
     expired: req.body.expired,
     category: req.body.category,
+    image: req.file.path,
   });
+
   const createProduct = newProductModel.save(newProductModel);
   res.redirect(`/product/${params}`);
 };

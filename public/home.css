@@ -45,7 +45,7 @@ nav {
 /* Jumbotron */
 
 .jumbotron {
-  background: url(./img/lauren-sauder-1OUzxbySjlQ-unsplash.jpg);
+  background: url("./img/lauren-sauder-1OUzxbySjlQ-unsplash.jpg");
   padding: 250px 0 250px 0;
   background-size: cover;
   /* background-position: 0 -950px; */
